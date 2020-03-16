@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat app</title>
+    <script src="jquery.js"></script>
+    <script src="./socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1>CHAT APP</h1>
+    <h3>Welcome {{user.name}}!</h3>
+    <div id="chat-div">
+      <input id='inpUsername' value="{{user.username}}" style="display: none;">
+      <input placeholder="send to (default everyone)" id="inpToUser" />
+      <input placeholder="write your msg..." type="text" id="msgbox" />
+      <button id="sendbtn">SEND</button>
+      <form action="/logout">
+        <button id="logout">LOGOUT</button>
+      </form>
+      <ul id="msglist"></ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+const route = require("express").Router();
+const signUpRoute = require("./signup");
+const loginRoute = require("./login");
+const chatRoute = require("./chat");
+const logoutRoute = require("./logout");
+route.use("/signup", signUpRoute);
+route.use("/login", loginRoute);
+route.use("/", chatRoute);
+route.use("/logout", logoutRoute);
+module.exports = route;
